@@ -151,15 +151,15 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',  # Default to public access
+        'rest_framework.permissions.AllowAny', 
     ],
 }
 
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=5),  # Increase token lifetime
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  # Increase refresh token lifetime
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=5),  
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
     'USER_ID_FIELD': 'id',

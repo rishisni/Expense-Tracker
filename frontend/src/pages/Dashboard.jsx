@@ -11,7 +11,7 @@ const Dashboard = () => {
     const storedRole = localStorage.getItem("role");
 
     if (!storedRole) {
-      navigate("/login"); // Redirect if no role is found
+      navigate("/login"); 
     } else {
       setRole(storedRole);
     }

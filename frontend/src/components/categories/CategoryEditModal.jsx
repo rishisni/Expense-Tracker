@@ -31,7 +31,7 @@ const CategoryEditModal = ({ open, onClose, category, onCategoryUpdated }) => {
       maxWidth="sm" 
       fullWidth 
       sx={{
-        "& .MuiDialog-paper": { width: "80%", maxWidth: "500px" } // 80% width, max 500px for large screens
+        "& .MuiDialog-paper": { width: "80%", maxWidth: "500px" } 
       }}
     >
       <DialogTitle>Edit Category</DialogTitle>

@@ -60,7 +60,7 @@ const HomePage = () => {
         </Grid>
       </Grid>
 
-      {/* Info Section */}
+      
       <Box sx={{ textAlign: "center", mt: 6, py: 4 }}>
         <Typography variant="h5" fontWeight="bold">
           Take Control of Your Budgeting

@@ -81,7 +81,7 @@ const ExpensesList = ({ onEdit, onDelete }) => {
         </FormControl>
       )}
 
-      {/* ✅ Export to PDF Button (Visible for both Admin & User) */}
+      {/* Export to PDF Button (Visible for both Admin & User) */}
       <Button 
         variant="contained" 
         color="secondary" 

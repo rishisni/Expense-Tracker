@@ -100,7 +100,7 @@ class ExpenseViewSet(viewsets.ModelViewSet):
            if user.role == "admin" and user_email:
                return Expense.objects.filter(user__email=user_email)
 
-           return Expense.objects.filter(user=user)  # Users can only see their own expenses
+           return Expense.objects.filter(user=user)  
 
        def perform_create(self, serializer):
            serializer.save(user=self.request.user)
@@ -109,10 +109,10 @@ class ExpenseViewSet(viewsets.ModelViewSet):
 
 class AdminExpenseListView(generics.ListAPIView):
     serializer_class = ExpenseSerializer
-    permission_classes = [IsAdminUser]  # Only admins can access
+    permission_classes = [IsAdminUser]  
 
     def get_queryset(self):
-        return Expense.objects.all()  # Admins see all expenses
+        return Expense.objects.all() 
 
 
 class StatsViewSet(viewsets.ViewSet):
@@ -152,7 +152,7 @@ class StatsViewSet(viewsets.ViewSet):
 
         user_expenses = Expense.objects.values('user__email', 'date').annotate(
             total_spent=Sum('amount'),
-            total_expenses=Count('id')  # Count transactions per date
+            total_expenses=Count('id')  
         ).order_by('date')
 
         formatted_data = {}
@@ -171,11 +171,11 @@ class StatsViewSet(viewsets.ViewSet):
         """Returns expense trends for individual users."""
         data = Expense.objects.filter(user=request.user).values('date').annotate(
             total_spent=Sum('amount'),
-            total_expenses=Count('id')  # Count user's transactions per date
+            total_expenses=Count('id')  
         ).order_by('date')
 
         return Response({
             "dates": [entry['date'] for entry in data],
             "amounts": [entry['total_spent'] for entry in data],
-            "total_expenses": [entry['total_expenses'] for entry in data]  # Sending count of expenses
+            "total_expenses": [entry['total_expenses'] for entry in data]  
         })

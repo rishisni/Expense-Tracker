@@ -6,10 +6,10 @@ const AuthForm = ({ type, onSubmit }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    phone_number: isLogin ? "" : "", // Only for registration
+    phone_number: isLogin ? "" : "", 
   });
 
-  const [message, setMessage] = useState({ text: "", type: "" }); // Success/Error message state
+  const [message, setMessage] = useState({ text: "", type: "" }); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,7 +43,7 @@ const AuthForm = ({ type, onSubmit }) => {
         {isLogin ? "Login" : "Register"}
       </Button>
 
-      {/* Snackbar for Success/Error Messages */}
+     
       <Snackbar
         open={!!message.text}
         autoHideDuration={3000}

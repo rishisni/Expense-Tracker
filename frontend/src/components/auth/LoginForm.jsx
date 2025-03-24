@@ -12,13 +12,13 @@ const LoginForm = () => {
     try {
       const userData = await loginUser(credentials);
 
-      // Save token and role
+      
       localStorage.setItem("token", userData.access);
       localStorage.setItem("role", userData.role);
 
       login(userData);
       
-      navigate("/dashboard"); // Always go to /dashboard
+      navigate("/dashboard"); 
     } catch (error) {
       console.error("Login failed", error);
     }

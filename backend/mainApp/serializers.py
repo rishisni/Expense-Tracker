@@ -8,7 +8,7 @@ User = get_user_model()
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
-        data["role"] = self.user.role  # Include role in token response
+        data["role"] = self.user.role  
         return data
 
 class UserSerializer(serializers.ModelSerializer):
@@ -29,7 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class ExpenseSerializer(serializers.ModelSerializer):
-    category = serializers.CharField()  # Accepts category name as a string
+    category = serializers.CharField()  
 
     class Meta:
         model = Expense

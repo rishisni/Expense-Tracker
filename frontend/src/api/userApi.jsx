@@ -1,6 +1,6 @@
 import API from "./axiosConfig";
 
-// ✅ Fetch Logged-in User Data
+// Fetch Logged-in User Data
 export const getUserData = async () => {
   try {
     const token = localStorage.getItem("token");
@@ -16,6 +16,6 @@ export const getUserData = async () => {
   }
 };
 
-// ✅ Export all User API functions
+// Export all User API functions
 const userApi = { getUserData };
 export default userApi;

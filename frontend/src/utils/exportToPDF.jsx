@@ -4,22 +4,22 @@ import autoTable from "jspdf-autotable"; // ✅ Import autoTable correctly
 const exportToPDF = (columns, data, title, filename) => {
   const doc = new jsPDF();
 
-  // Debugging logs
-  console.log("Users before exporting:", data);
+  
+//   console.log("Users before exporting:", data);
 
   if (!Array.isArray(data) || data.length === 0) {
     alert("No data available to export!");
     return;
   }
 
-  // Ensure autoTable is properly initialized
+  
   try {
-    // Add title
+    
     doc.setFont("helvetica", "bold");
     doc.setFontSize(16);
     doc.text(title, 14, 15);
 
-    // Use autoTable
+    
     autoTable(doc, {
       startY: 25,
       head: [columns],

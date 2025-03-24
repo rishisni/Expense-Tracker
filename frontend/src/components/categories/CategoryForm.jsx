@@ -12,7 +12,7 @@ const CategoryForm = ({ onCategoryAdded }) => {
     try {
       await addCategory(categoryName);
       setCategoryName("");
-      onCategoryAdded(); // Refresh list after adding
+      onCategoryAdded(); 
     } catch (error) {
       console.error("Error adding category:", error);
     }
@@ -30,7 +30,7 @@ const CategoryForm = ({ onCategoryAdded }) => {
       <Box
         sx={{
           width: "80%",
-          maxWidth: "600px", // Prevents excessive width on larger screens
+          maxWidth: "600px", 
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",

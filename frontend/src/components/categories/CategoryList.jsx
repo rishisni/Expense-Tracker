@@ -7,7 +7,7 @@ import {
 import { Edit, Delete, PictureAsPdf } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 import { getCategories } from "../../api/categoryApi";
-import exportToPDF from "../../utils/exportToPDF"; // ✅ Import reusable export function
+import exportToPDF from "../../utils/exportToPDF"; 
 
 const CategoryList = ({ onEdit, onDelete }) => {
   const [categories, setCategories] = useState([]);
@@ -26,7 +26,7 @@ const CategoryList = ({ onEdit, onDelete }) => {
     }
   };
 
-  // ✅ Prepare columns and data for PDF
+  
   const handleExportPDF = () => {
     const columns = ["#", "Category Name"];
     const data = categories.map((category, index) => [index + 1, category.name]);

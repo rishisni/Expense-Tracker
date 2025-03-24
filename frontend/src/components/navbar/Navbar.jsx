@@ -11,7 +11,7 @@ const Navbar = () => {
 
   useEffect(() => {
     console.log("User changed:", user);
-  }, [user]); // Debugging log to check user changes
+  }, [user]); 
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

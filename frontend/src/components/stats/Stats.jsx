@@ -7,7 +7,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import ExpenseChart from "./ExpenseChart";
 import { fetchStats } from "../../api/statsApi";
 import { useTheme } from "@mui/material/styles";
-import exportToPDF from "../../utils/exportToPDF"; // ✅ Import the separate PDF utility
+import exportToPDF from "../../utils/exportToPDF"; 
 
 const Stats = () => {
   const theme = useTheme();
@@ -54,7 +54,7 @@ const Stats = () => {
           { title: "Total Spent", value: `₹${stats.user_spent?.toFixed(2) || "0"}`, icon: <MonetizationOnIcon fontSize="large" />, color: theme.palette.success.main },
         ];
 
-  // 📜 Export PDF Function (Using Separate Utility)
+  // Export PDF Function (Using Separate Utility)
   const handleExportPDF = () => {
     const title = userRole === "admin" ? "Admin Stats Report" : "Your Expense Overview";
     const filename = userRole === "admin" ? "Admin_Stats_Report.pdf" : "User_Expense_Report.pdf";
@@ -86,7 +86,7 @@ const Stats = () => {
         ))}
       </Grid>
 
-      {/* 📥 Export PDF Button */}
+      {/*  Export PDF Button */}
       <Button 
         variant="contained" 
         color="primary" 

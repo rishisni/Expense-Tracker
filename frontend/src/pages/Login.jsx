@@ -9,7 +9,7 @@ const Login = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "100vh", // Full viewport height
+          minHeight: "100vh", 
         }}
       >
         <LoginForm />

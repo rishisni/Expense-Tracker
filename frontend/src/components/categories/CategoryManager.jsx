@@ -28,7 +28,7 @@ const CategoryManager = () => {
   const handleAddCategory = async (categoryName) => {
     try {
       const newCategory = await addCategory(categoryName);
-      setCategories((prevCategories) => [...prevCategories, newCategory]); // ✅ Append new category to state
+      setCategories((prevCategories) => [...prevCategories, newCategory]); 
     } catch (error) {
       console.error("Error adding category:", error);
     }
@@ -38,7 +38,7 @@ const CategoryManager = () => {
     if (!window.confirm("Are you sure you want to delete this category?")) return;
     try {
       await deleteCategory(id);
-      setCategories((prevCategories) => prevCategories.filter((category) => category.id !== id)); // ✅ Remove category from state
+      setCategories((prevCategories) => prevCategories.filter((category) => category.id !== id)); 
     } catch (error) {
       console.error("Error deleting category:", error);
     }

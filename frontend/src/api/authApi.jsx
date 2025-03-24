@@ -1,21 +1,21 @@
 import API from "./axiosConfig";
 
-// ✅ Login API (Now uses email instead of username)
+//  Login API 
 export const loginUser = async (credentials) => {
   const { data } = await API.post("/token/", credentials);
   localStorage.setItem("token", data.access);
   return data;
 };
 
-// ✅ Register API (Now uses email, password, phone number)
+//  Register API 
 export const registerUser = async (formData) => {
   return await API.post("/register/", formData);
 };
 
-// ✅ Logout API (Clears token and logs user out)
+// Logout API (Clears token and logs user out)
 export const logoutUser = async () => {
   try {
-    await API.post("/logout/"); // Adjust endpoint if needed
+    await API.post("/logout/"); 
   } catch (error) {
     console.error("Logout error:", error);
   } finally {

@@ -9,14 +9,14 @@ const Footer = () => {
       component="footer"
       sx={{
         marginTop:"10vh",
-        bottom: 0, // Stick to the bottom
+        bottom: 0, 
         left: 0,
-        width: "100%", // Full width
+        width: "100%", 
         textAlign: "center",
         py: 2,
         backgroundColor: theme.palette.success.main,
         color: theme.palette.text.primary,
-        boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)", // Optional shadow effect
+        boxShadow: "0 -2px 4px rgba(0, 0, 0, 0.1)", 
       }}
     >
       <Typography variant="body2" display="flex" alignItems="center" justifyContent="center">
