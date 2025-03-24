@@ -8,19 +8,19 @@ The **Expense Management System** is a role-based application where **Admins** c
 ## **Features**  
 
 ### **Admin Dashboard**  
-View **Total Users**, **Total Categories**, **Total Transactions**, and **Total Amount Spent**.  
-Visualize **expense trends** using charts.  
-Export statistics as a **PDF report**.  
+- View **Total Users**, **Total Categories**, **Total Transactions**, and **Total Amount Spent**.  
+- Visualize **expense trends** using charts.  
+- Export statistics as a **PDF report**.  
 
 ### **User Dashboard**  
-View **Your Transactions** and **Total Spent**.  
-Export user-specific statistics as a **PDF report**.  
+- View **Your Transactions** and **Total Spent**.  
+- Export user-specific statistics as a **PDF report**.  
 
 ### **Other Features**  
-**Dynamic UI Rendering:** Dashboard updates based on the user's role (Admin/User).  
-**Interactive Expense Chart:** Uses Material-UI charts for visualization.  
-**PDF Export Utility:** Exports statistics using `jsPDF` and `autoTable`.  
-**Optimized API Fetching:** Fetches statistics dynamically using `fetchStats` API.  
+- **Dynamic UI Rendering:** Dashboard updates based on the user's role (Admin/User).  
+- **Interactive Expense Chart:** Uses Material-UI charts for visualization.  
+- **PDF Export Utility:** Exports statistics using `jsPDF` and `autoTable`.  
+- **Optimized API Fetching:** Fetches statistics dynamically using `fetchStats` API.  
 
 ---
 
@@ -39,5 +39,19 @@ Export user-specific statistics as a **PDF report**.
 - Fetch API  
 
 ---
+
+## **Backend Details**  
+
+### **Backend Framework:**  
+- Django Rest Framework (DRF)  
+
+### **Database:**  
+- Sqlite (Devolpment)
+- PostgreSQL / MySQL (based on deployment requirements)  
+
+### **Authentication & Authorization:**  
+- Token-based authentication using Django REST Framework  
+- Role-based access control (Admin & User)  
+
 
 
