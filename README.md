@@ -53,5 +53,32 @@ The **Expense Management System** is a role-based application where **Admins** c
 - Token-based authentication using Django REST Framework  
 - Role-based access control (Admin & User)  
 
+# Setup Instructions
+
+## 1 Clone the Repository  
+```bash
+git clone https://github.com/rishisni/Expense-Tracker.git
+cd expense-tracker
+
+## 1 Frontend Setup (React + Vite)
+```bash
+cd frontend (Navigate to the frontend directory)
+npm install (Install dependencies)
+npm run dev (Start the frontend server)
+
+The React app will run at http://localhost:5173/.
 
 
+## 1 Backend Setup (Django + DRF)
+```bash
+cd backend (Navigate to the backend directory in another terminal)
+Create and activate a virtual environment :
+  python3 -m venv venv
+  source venv/bin/activate  # Mac/Linux
+  venv\Scripts\activate     # Windows
+
+pip install -r requirements.txt (Install dependencies from requirements.txt)
+python manage.py migrate (Run database migrations)
+python manage.py runserver (Start the Django backend server)
+
+The backend API will be available at http://127.0.0.1:8000/
