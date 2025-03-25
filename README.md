@@ -61,7 +61,7 @@ git clone https://github.com/rishisni/Expense-Tracker.git
 cd expense-tracker
 
 ## 1 Frontend Setup (React + Vite)
-```bash
+
 cd frontend (Navigate to the frontend directory)
 npm install (Install dependencies)
 npm run dev (Start the frontend server)
@@ -70,7 +70,7 @@ The React app will run at http://localhost:5173/.
 
 
 ## 1 Backend Setup (Django + DRF)
-```bash
+
 cd backend (Navigate to the backend directory in another terminal)
 Create and activate a virtual environment :
   python3 -m venv venv
